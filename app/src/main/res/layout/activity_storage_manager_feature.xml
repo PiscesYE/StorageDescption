@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.StorageManagerFeatureActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_jarvis_file_manager_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress_external_storage"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_external_storage_show"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/holo_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_external_storage" />
+
+        <ProgressBar
+            android:id="@+id/progress_internal_storage"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_external_storage_show" />
+
+        <TextView
+            android:id="@+id/text_internal_storage_show"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/holo_blue_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progress_internal_storage" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_jarvis_file_manager_home"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_system_root"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="27dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_jarvis_dir_system_root" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="system\nroot"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_system_root" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_internal_app_root"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="27dp"
+            app:layout_constraintStart_toEndOf="@+id/img_jarvis_dir_system_root"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_jarvis_dir_internal_app_root" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="internal\nroot"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_internal_app_root" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_internal_files"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="27dp"
+            app:layout_constraintStart_toEndOf="@+id/img_jarvis_dir_internal_app_root"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_jarvis_dir_internal_files" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="internal\nfiles"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_internal_files" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_eaternal_public_root"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="27dp"
+            app:layout_constraintStart_toEndOf="@+id/img_jarvis_dir_internal_files"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_jarvis_dir_external_public_root" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="public\nroot"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_eaternal_public_root" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_external_public_pictures"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_system_root"
+            app:srcCompat="@drawable/icon_jarvis_dir_external_public_pictures" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="public\npictures"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_external_public_pictures" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_external_private_root"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toEndOf="@+id/img_jarvis_dir_external_public_pictures"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_internal_app_root"
+            app:srcCompat="@drawable/icon_jarvis_dir_external_private_root" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="private\nroot"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView7"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_external_private_root" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_external_private_files"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toEndOf="@+id/img_jarvis_dir_external_private_root"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_internal_files"
+            app:srcCompat="@drawable/icon_jarvis_dir_external_private_files" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="private\nfiles"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_external_private_files" />
+
+        <ImageView
+            android:id="@+id/img_jarvis_dir_external_private_pictures"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toEndOf="@+id/img_jarvis_dir_external_private_files"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_eaternal_public_root"
+            app:srcCompat="@drawable/icon_jarvis_dir_external_private_pictures" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="private\npictures"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/img_jarvis_dir_external_private_pictures" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/text_go_to_description"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_jarvis_home_test_menu"
+        android:paddingTop="5dp"
+        android:text="  内存结构描述"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_go_to_description"
+        app:layout_constraintTop_toTopOf="@+id/text_go_to_description"
+        app:srcCompat="@drawable/icon_jarvis_right_to" />
+
+
+</android.support.constraint.ConstraintLayout>

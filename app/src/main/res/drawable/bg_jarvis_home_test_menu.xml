@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:top="-3dp"
+        android:left="-3dp"
+        android:right="-3dp">
+        <shape>
+            <!-- 填充颜色 -->
+            <solid />
+            <!-- 修改底部线条颜色 -->
+            <stroke android:color="@color/lightGary"
+                android:width="2dp"/>
+        </shape>
+    </item>
+</layer-list>
